@@ -1,3 +1,14 @@
 <p>
-  show-message works!
+  <!-- Input is bound to the myMessage property -->
+  <!-- the default value is set = '' -->
+  <!-- the # syntax indicates a template reference variable -->
+  <!-- which can be accessed directly -->
+  <input #myMessage myMessage.value='' />
+
+  <!-- myMessage.value i spassed as ap parameter to the onClickMe method --> 
+  <button (click)="onClickMe(myMessage.value)">Click me!</button>
 </p>
+
+<!-- Display the value by binding to a h3 element -->
+<!-- css class for styling -->
+<h3 class="message">{{clickMessage}}</h3>
